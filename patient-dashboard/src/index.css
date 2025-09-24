@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+}
+
+@layer base {
+}
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background: #2563eb; /* blue */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Page Container */
+.p-4 {
+  padding: 1.5rem;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 1rem;
+}
+
+/* Patient Card Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Patient Card */
+.patient-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.patient-card:hover {
+  transform: translateY(-3px);
+}
+
+.patient-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  margin-left: 10px;
+  padding-top: 5px;
+  height: 35px;
+  border: black;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition:0.2s ease;
+}
+
+button.bg-blue {
+  background: #2563eb;
+  color: white;
+}
+
+button.bg-blue:hover {
+  background: #1e40af;
+}
+
+button.bg-green {
+  background: #16a34a;
+  color: white;
+}
+
+button.bg-green:hover {
+  background: #15803d;
+}
+
+/* Form */
+form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.25rem;
+}
+
+form input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
